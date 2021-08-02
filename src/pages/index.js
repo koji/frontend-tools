@@ -11,8 +11,6 @@ export default function FETools({ tools }) {
 
 export const getStaticProps = async () => {
   // ToDo use .env for development & env var for production
-  // console.log(process.env.CONTENTFUL_SPACE_ID);
-  // console.log(process.env.CONTENTFUL_ACCESS_TOKEN);
   const client = createClient({
     space: process.env.CONTENTFUL_SPACE_ID,
     accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
