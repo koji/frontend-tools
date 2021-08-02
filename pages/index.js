@@ -2,7 +2,6 @@ import { createClient } from "contentful";
 import { ToolCardList } from "../components/ToolCardList";
 
 export default function FETools({ tools }) {
-  console.log(tools);
   return (
     <div className="recipe-list">
       <ToolCardList tools={tools} />

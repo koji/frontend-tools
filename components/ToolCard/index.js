@@ -1,4 +1,6 @@
 import Link from "next/link";
+import Image from "next/image";
+import styles from "./ToolCard.module.css";
 
 export const ToolCard = ({ tool }) => {
   // title: string;
@@ -8,16 +10,23 @@ export const ToolCard = ({ tool }) => {
   // category: string[]
   const { title, description, thumbnail, link, category } = tool;
   return (
-    <div className="card">
-      <div className="featured"></div>
-      <div className="content">
-        <div className="info">
-          <h4>{title}</h4>
-          <p>{description}</p>
+    <div className={styles.tool__card}>
+      <div className="featured">
+        <Image
+          src={`https:${thumbnail.fields.file.url}`}
+          width={thumbnail.fields.file.details.image.width}
+          height={thumbnail.fields.file.details.image.height}
+          alt={thumbnail.fields.file.title}
+        />
+      </div>
+      <div className={styles.tool__content}>
+        <div className={styles.tool__info}>
+          <h4 className={styles.tool__card__title}>{title}</h4>
+          <p className={styles.tool__card__description}>{description}</p>
         </div>
-        <div className="actions">
+        <div className={styles.tool_actions}>
           <Link href={link}>
-            <a>{link}</a>
+            <a className={styles.tool_actions__link}>{link}</a>
           </Link>
         </div>
       </div>
