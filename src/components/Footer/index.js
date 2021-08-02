@@ -1,8 +1,9 @@
 import Link from "next/link";
+import styles from "./Footer.module.css";
 
 export const Footer = () => {
   return (
-    <footer>
+    <footer className={styles.container}>
       <p>
         Copyright 2021{" "}
         <Link href="https://koji.thedev.id">

@@ -1,18 +1,21 @@
 import Link from "next/link";
+import styles from "./Header.module.css";
 
 export const Header = () => {
   return (
-    <header>
+    <header className={styles.container}>
       <Link href="/">
-        <a>
-          <h1>
-            <span style={{ color: "#ff9f43" }}>Front</span>
-            <span style={{ color: "#0abde3" }}>End</span>
-            <span style={{ color: "#ee5253" }}>Tools</span>
+        <a className={styles.link}>
+          <h1 className={styles.headers}>
+            <span className={styles.header__title__first}>Front</span>
+            <span className={styles.header__title__second}>End</span>
+            <span className={styles.header__title__third}>Tools</span>
             {/* <span style={{ color: "#00d2d3" }}>acti</span>
               <span style={{ color: "#5f27cd" }}>ons</span> */}
           </h1>
-          <h2>Spread Joy & Usefulness</h2>
+          <h2 className={`${styles.headers} ${styles.header__subtitle}`}>
+            Spread Joy & Usefulness
+          </h2>
         </a>
       </Link>
     </header>
