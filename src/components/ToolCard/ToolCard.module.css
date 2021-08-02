@@ -3,7 +3,8 @@
 }
 
 .tool__content {
-  background: #fff;
+  /* background: #fff; */
+  background: #242629;
   box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
   margin: 0;
   position: relative;
@@ -15,21 +16,26 @@
   padding: 16px;
 }
 .tool__card__title {
+  color: #fffffe;
   margin: 4px 0;
   text-transform: uppercase;
 }
-.tool_card_description {
+.tool__card__description {
+  color: #94a1b2;
   margin: 0;
-  color: #777;
+  /* color: #94a1b2 !important; */
+  /* color: #fff; */
 }
-.tool_actions {
+.tool__actions {
   margin-top: 20px;
   display: flex;
   justify-content: flex-end;
 }
-.tool_actions__link {
+.tool__actions__link {
   color: #fff;
-  background: #f01b29;
+  font-size: 0.75em;
+  /* background: #f01b29; */
+  background: #7f5af0;
   padding: 16px 24px;
   text-decoration: none;
 }
