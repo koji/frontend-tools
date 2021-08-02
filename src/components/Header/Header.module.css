@@ -1,0 +1,52 @@
+.container {
+  text-align: center;
+  margin: 60px 0;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.headers {
+  margin: 0;
+}
+
+.header__title__first {
+  color: #ff9f43;
+}
+.header__title__second {
+  color: #0abde3;
+}
+.header__title__third {
+  color: #ee5253;
+}
+
+.header__subtitle {
+  font-size: 1.2em;
+  font-weight: 400;
+  color: #fff;
+}
+
+/* header span {
+  display: block;
+  line-height: 1em;
+}
+header span:first-child {
+  font-size: 1em;
+  font-weight: 400;
+}
+header span:last-child {
+  font-size: 1.5em;
+  font-weight: 800;
+} */
+
+/* .header__title__forth {
+  color: #00d2d3;
+}
+
+.header__title__fifth {
+  color: #5f27cd;
+} */
