@@ -1,9 +1,24 @@
-This is the Next.js starter site (and course files) for the Next.js & Contentful tutorial by the Net Ninja.
+# FE-tools
 
-## Getting Started
+## how to run
 
-To use the starter project, run the following in a terminal:
+- clone this repo
+- install packages
+- run dev server
 
-```bash
-npx create-next-app [your-site-name] -e https://github.com/iamshaunjp/next-contentful/tree/lesson-1-starter-site
+requirements: nodejs and yarn/npm  
+
+```zsh
+$ git clone https://github.com/koji/frontend-tools.git
+$ cd frontend-tools
+
+# yarn or npm for installing packages
+$ yarn
+$ npm i / npm install
+
+# yarn or npm for running dev server
+$ yarn dev
+$ npm run dev
 ```
+
+open http://localhost:3000 with a browser.  
