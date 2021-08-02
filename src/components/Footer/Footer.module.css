@@ -5,3 +5,8 @@
   text-align: center;
   margin-top: auto;
 }
+
+.link {
+  text-decoration: none;
+  color: #5930e5;
+}

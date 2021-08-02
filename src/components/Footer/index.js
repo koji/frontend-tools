@@ -7,7 +7,7 @@ export const Footer = () => {
       <p>
         Copyright 2021{" "}
         <Link href="https://koji.thedev.id">
-          <a>koji kanao</a>
+          <a className={styles.link}>koji kanao</a>
         </Link>{" "}
         :)
       </p>
