@@ -10,7 +10,7 @@ export const Header = () => {
             {/* <span className={styles.header__title__first}>Front</span>
             <span className={styles.header__title__second}>End</span>
             <span className={styles.header__title__third}>Tools</span> */}
-            <span className={styles.header__title}>FrontEnd Tools</span>
+            <span className={styles.header__title}>Frontend Tools</span>
           </h1>
           <h2 className={`${styles.headers} ${styles.header__subtitle}`}>
             Spread Joy & Usefulness

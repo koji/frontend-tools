@@ -5,7 +5,7 @@
 
 .link {
   text-decoration: none;
-  color: black;
+  /* color: black; */
   text-transform: uppercase;
   display: inline-block;
 }
