@@ -1,5 +1,6 @@
 .tool__card {
   transform: rotateZ(-1deg);
+  max-width: 320px;
 }
 
 .tool__content {
