@@ -25,7 +25,7 @@ export const getStaticProps = async () => {
       props: {
         tools: response.items,
         counter: response.items.length,
-        revalidate: 60 * 60 * 24, // 24 hours
+        // revalidate: 60 * 60 * 24, // 24 hours
       },
     };
   } catch (error) {
