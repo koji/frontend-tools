@@ -11,7 +11,7 @@ export const ToolCard = ({ tool }) => {
   const { title, description, thumbnail, link, category } = tool;
   return (
     <div className={styles.tool__card}>
-      <div className="featured">
+      <div>
         <Image
           src={`https:${thumbnail.fields.file.url}`}
           width={thumbnail.fields.file.details.image.width}
@@ -24,9 +24,9 @@ export const ToolCard = ({ tool }) => {
           <h4 className={styles.tool__card__title}>{title}</h4>
           <p className={styles.tool__card__description}>{description}</p>
         </div>
-        <div className={styles.tool_actions}>
+        <div className={styles.tool__actions}>
           <Link href={link}>
-            <a className={styles.tool_actions__link}>{link}</a>
+            <a className={styles.tool__actions__link}>{link}</a>
           </Link>
         </div>
       </div>
