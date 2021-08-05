@@ -31,7 +31,7 @@ export default function FETools({ tools, counter }) {
   );
 }
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   // ToDo use .env for development & env var for production
   const client = createClient({
     space: process.env.CONTENTFUL_SPACE_ID,
@@ -49,6 +49,6 @@ export const getStaticProps = async () => {
       },
     };
   } catch (error) {
-    console.error(`getStaticProps: ${error}`);
+    console.error(`getServerSideProps: ${error}`);
   }
 };
