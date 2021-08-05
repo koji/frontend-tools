@@ -1,12 +1,30 @@
 import { createClient } from "contentful";
 import { ToolCardList } from "../components/ToolCardList";
 import { ToolCounter } from "../components/ToolCounter";
+import { SearchBar } from "../components/SearchBar";
+import { useState } from "react";
 
 export default function FETools({ tools, counter }) {
+  const [search, setSearch] = useState("");
+
+  const filteredTools = tools.filter((tool) =>
+    tool.fields.description.toLowerCase().includes(search.toLowerCase())
+  );
+
+  const handleChange = (e) => {
+    e.preventDefault();
+    setSearch(e.target.value.toLowerCase());
+  };
+
   return (
-    <div className="recipe-list">
+    <div className="container">
+      <SearchBar
+        type="text"
+        placeholder="Type keyword to search tools"
+        onChange={handleChange}
+      />
       <ToolCounter counter={counter} />
-      <ToolCardList tools={tools} />
+      <ToolCardList tools={filteredTools} />
     </div>
   );
 }
