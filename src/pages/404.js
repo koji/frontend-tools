@@ -17,7 +17,7 @@ export default function NotFound() {
     <div className="not-found">
       <SEO title="404: Not Found" />
       <div>
-        <Image src="/images/404.png" alt="Not Found" height={400} width={714} />
+        <Image alt="Not Found" src="/images/404.png" height={400} width={714} />
       </div>
     </div>
   );
