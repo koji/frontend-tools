@@ -4,6 +4,7 @@
   align-items: center;
   width: 300px;
 }
+
 .input {
   background: #222531;
   border: none;
@@ -14,6 +15,7 @@
   width: 100%;
   color: #e2e2e2;
 }
+
 .input::placeholder {
   color: #e2e2e2;
 }
