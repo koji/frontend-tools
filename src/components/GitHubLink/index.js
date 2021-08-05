@@ -10,6 +10,9 @@ export const GitHubLink = () => {
           <GoMarkGithub className={styles.icon} />
         </a>
       </Link>
+      <Link href="https://forms.gle/ZUZALQDFuhMqqdbh9">
+        <a className={styles.req}>request</a>
+      </Link>
     </div>
   );
 };
