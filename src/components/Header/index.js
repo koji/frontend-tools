@@ -1,11 +1,11 @@
 import Link from "next/link";
 import styles from "./Header.module.css";
-import { GitHubLink } from "../../components/GitHubLink";
+import { HeaderLink } from "../../components/HeaderLink";
 
 export const Header = () => {
   return (
     <header className={styles.container}>
-      <GitHubLink />
+      <HeaderLink />
       <Link href="/">
         <a className={styles.link}>
           <h1 className={styles.headers}>
@@ -17,7 +17,6 @@ export const Header = () => {
           <h2 className={`${styles.headers} ${styles.header__subtitle}`}>
             Spread Joy & Usefulness
           </h2>
-          {/* <GitHubLink /> */}
         </a>
       </Link>
     </header>

@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { GoMarkGithub } from "react-icons/go";
-import styles from "./GitHubLink.module.css";
+import styles from "./HeaderLink.module.css";
 
-export const GitHubLink = () => {
+export const HeaderLink = () => {
   return (
     <div className={styles.container}>
       <Link href="https://github.com/koji/frontend-tools">
