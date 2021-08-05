@@ -3,6 +3,7 @@ import { ToolCardList } from "../components/ToolCardList";
 import { ToolCounter } from "../components/ToolCounter";
 import { SearchBar } from "../components/SearchBar";
 import { useState } from "react";
+import { SEO } from "../components/SEO";
 
 export default function FETools({ tools, counter }) {
   const [search, setSearch] = useState("");
@@ -18,6 +19,7 @@ export default function FETools({ tools, counter }) {
 
   return (
     <div className="container">
+      <SEO title="home" />
       <SearchBar
         type="text"
         placeholder="Type keyword to search tools"
