@@ -1,6 +1,6 @@
 .container {
   text-align: center;
-  margin: 60px 0;
+  margin: 30px 0;
 }
 
 .link {
@@ -24,14 +24,8 @@
   color: #ee5253;
 } */
 
-.header__subtitle {
-  font-size: 1.2em;
-  font-weight: 400;
-  color: #fffffe;
-}
-
 .header__title {
-  font-size: 2.5rem;
+  font-size: 2em;
   box-sizing: border-box;
   min-width: 0px;
   line-height: 1.2;
@@ -49,6 +43,12 @@
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+}
+
+.header__subtitle {
+  font-size: 2rem;
+  font-weight: 400;
+  color: #fffffe;
 }
 
 /* header span {
