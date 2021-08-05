@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
+import Image from "next/image";
 
 export default function NotFound() {
   const router = useRouter();
@@ -8,16 +9,14 @@ export default function NotFound() {
   useEffect(() => {
     setTimeout(() => {
       router.push("/");
-    }, 4000);
+    }, 5000);
   }, []);
 
   return (
     <div className="not-found">
-      <h1>404</h1>
-      <h2>That page cannot be found :(</h2>
-      <p>
-        redirecting to the <Link href="/">home</Link>
-      </p>
+      <div>
+        <Image src="/images/404.png" alt="Not Found" height={400} width={714} />
+      </div>
     </div>
   );
 }
