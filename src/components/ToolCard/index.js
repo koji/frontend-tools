@@ -26,7 +26,7 @@ export const ToolCard = ({ tool }) => {
         </div>
         <div className={styles.tool__actions}>
           <Link href={link}>
-            <a className={styles.tool__actions__link}>{link}</a>
+            <a className={styles.tool__actions__link}>Check this</a>
           </Link>
         </div>
       </div>
