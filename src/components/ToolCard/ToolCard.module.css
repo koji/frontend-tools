@@ -20,10 +20,12 @@
   color: #fffffe;
   margin: 4px 0;
   text-transform: uppercase;
+  font-size: 1.2rem;
 }
 .tool__card__description {
   color: #94a1b2;
   margin: 0;
+  font-size: 1.1rem;
   /* color: #94a1b2 !important; */
   /* color: #fff; */
 }

@@ -2,7 +2,7 @@ import Link from "next/link";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
 import Image from "next/image";
-import { SEO } from "../components/SEO";
+import { PageSEO } from "../components/PageSEO";
 
 export default function NotFound() {
   const router = useRouter();
@@ -15,7 +15,7 @@ export default function NotFound() {
 
   return (
     <div className="not-found">
-      <SEO title="404: Not Found" />
+      <PageSEO title="404: Not Found" />
       <div>
         <Image alt="Not Found" src="/images/404.png" height={400} width={714} />
       </div>

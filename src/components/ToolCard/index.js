@@ -21,7 +21,7 @@ export const ToolCard = ({ tool }) => {
       </div>
       <div className={styles.tool__content}>
         <div className={styles.tool__info}>
-          <h4 className={styles.tool__card__title}>{title}</h4>
+          <h2 className={styles.tool__card__title}>{title}</h2>
           <p className={styles.tool__card__description}>{description}</p>
         </div>
         <div className={styles.tool__actions}>
