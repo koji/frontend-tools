@@ -12,6 +12,11 @@ export const PageSEO = ({ title }) => {
         name="description"
         content="fetools - A collection of tools for front-end developers. Offer useful information for web development!"
       />
+      <meta name="author" content="koji kanao" />
+      <meta
+        name="keywords"
+        content="HTML, CSS, JavaScript, TypeScript, Frontend, Image, Tool, Web development, Frontend development"
+      ></meta>
 
       <meta property="og:type" content="website" />
       <meta property="og:url" content="https://fetools.vercel.app/" />
