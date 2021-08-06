@@ -23,10 +23,7 @@ export const PageSEO = ({ title }) => {
         property="og:description"
         content="fetools - A collection of tools for front-end developers. Offer useful information for web development!"
       />
-      <meta
-        property="og:image"
-        content="https://user-images.githubusercontent.com/474225/128434919-88ab6e5a-e23e-4eba-bc91-4f4b4e01e95f.jpg"
-      />
+      <meta property="og:image" content={"/thumbnail.jpg"} />
 
       <meta property="twitter:card" content="summary_large_image" />
       <meta property="twitter:url" content="https://fetools.vercel.app/" />
@@ -38,10 +35,7 @@ export const PageSEO = ({ title }) => {
         property="twitter:description"
         content="fetools - A collection of tools for front-end developers. Offer useful information for web development!"
       />
-      <meta
-        property="twitter:image"
-        content="https://user-images.githubusercontent.com/474225/128434919-88ab6e5a-e23e-4eba-bc91-4f4b4e01e95f.jpg"
-      />
+      <meta property="twitter:image" content={"/thumbnail.jpg"} />
       {/* <meta
         name="description"
         content="A collection of tools for front-end developers."
