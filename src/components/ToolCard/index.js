@@ -13,7 +13,7 @@ export const ToolCard = ({ tool }) => {
     <div className={styles.tool__card}>
       <div>
         <Image
-          alt={thumbnail.fields.file.title}
+          alt={thumbnail.fields.title}
           src={`https:${thumbnail.fields.file.url}`}
           width={thumbnail.fields.file.details.image.width}
           height={thumbnail.fields.file.details.image.height}
