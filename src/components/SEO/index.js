@@ -4,6 +4,7 @@ export const SEO = ({ title }) => {
   return (
     <Head>
       <title>{`fetools - ${title}`}</title>
+      <html lang="en-us" />
       <meta
         name="description"
         content="A collection of tools for front-end developers."
