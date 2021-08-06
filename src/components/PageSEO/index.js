@@ -1,4 +1,5 @@
 import Head from "next/head";
+import thumbnail from "../../../public/images/thumbnail.jpg";
 
 export const PageSEO = ({ title }) => {
   return (
@@ -23,7 +24,7 @@ export const PageSEO = ({ title }) => {
         property="og:description"
         content="fetools - A collection of tools for front-end developers. Offer useful information for web development!"
       />
-      <meta property="og:image" content={"/thumbnail.jpg"} />
+      <meta property="og:image" content={thumbnail} />
 
       <meta property="twitter:card" content="summary_large_image" />
       <meta property="twitter:url" content="https://fetools.vercel.app/" />
@@ -35,7 +36,7 @@ export const PageSEO = ({ title }) => {
         property="twitter:description"
         content="fetools - A collection of tools for front-end developers. Offer useful information for web development!"
       />
-      <meta property="twitter:image" content={"/thumbnail.jpg"} />
+      <meta property="twitter:image" content={thumbnail} />
     </Head>
   );
 };
