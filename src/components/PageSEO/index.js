@@ -16,7 +16,11 @@ export const PageSEO = ({ title }) => {
       <meta
         name="keywords"
         content="HTML, CSS, JavaScript, TypeScript, Frontend, Image, Tool, Web development, Frontend development"
-      ></meta>
+      />
+      <meta
+        name="google-site-verification"
+        content="yFEV7ljAJkrCTMlIRwO1lMEpbC5ZeSeJr2Il9eZL1CI"
+      />
 
       <meta property="og:type" content="website" />
       <meta property="og:url" content="https://fetools.vercel.app/" />
