@@ -103,6 +103,23 @@
   resolved "https://registry.yarnpkg.com/@opentelemetry/context-base/-/context-base-0.14.0.tgz#c67fc20a4d891447ca1a855d7d70fa79a3533001"
   integrity sha512-sDOAZcYwynHFTbLo6n8kIbLiVF3a3BLkrmehJUyEbT9F+Smbi47kLGS2gG2g0fjBLR/Lr1InPD7kXL7FaTqEkw==
 
+"@types/node@*":
+  version "16.4.13"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-16.4.13.tgz#7dfd9c14661edc65cccd43a29eb454174642370d"
+  integrity sha512-bLL69sKtd25w7p1nvg9pigE4gtKVpGTPojBFLMkGHXuUgap2sLqQt2qUnqmVCDfzGUL0DRNZP+1prIZJbMeAXg==
+
+"@types/node@^15.0.1":
+  version "15.14.7"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-15.14.7.tgz#29fea9a5b14e2b75c19028e1c7a32edd1e89fe92"
+  integrity sha512-FA45p37/mLhpebgbPWWCKfOisTjxGK9lwcHlJ6XVLfu3NgfcazOJHdYUZCWPMK8QX4LhNZdmfo6iMz9FqpUbaw==
+
+"@types/sax@^1.2.1":
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/@types/sax/-/sax-1.2.3.tgz#b630ac1403ebd7812e0bf9a10de9bf5077afb348"
+  integrity sha512-+QSw6Tqvs/KQpZX8DvIl3hZSjNFLW/OqE5nlyHXtTwODaJvioN2rOWpBNEWZp2HZUFhOh+VohmJku/WxEXU2XA==
+  dependencies:
+    "@types/node" "*"
+
 anser@1.4.9:
   version "1.4.9"
   resolved "https://registry.yarnpkg.com/anser/-/anser-1.4.9.tgz#1f85423a5dcf8da4631a341665ff675b96845760"
@@ -134,6 +151,11 @@ anymatch@~3.1.1:
   dependencies:
     normalize-path "^3.0.0"
     picomatch "^2.0.4"
+
+arg@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/arg/-/arg-5.0.0.tgz#a20e2bb5710e82950a516b3f933fee5ed478be90"
+  integrity sha512-4P8Zm2H+BRS+c/xX1LrHw0qKpEhdlZjLCgWy+d78T9vqa2Z2SiD2wMrYuWIAFy5IZUD7nnNXroRttz+0RzlrzQ==
 
 asn1.js@^5.2.0:
   version "5.4.1"
@@ -1353,6 +1375,11 @@ safe-buffer@~5.1.0, safe-buffer@~5.1.1:
   resolved "https://registry.yarnpkg.com/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
   integrity sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==
 
+sax@^1.2.4:
+  version "1.2.4"
+  resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"
+  integrity sha512-NqVDv9TpANUjFm0N8uM5GxL36UgKi9/atZw+x7YFnQ8ckwFGKrl4xX4yWtrey3UJm5nP1kUbnYgLopqWNSRhWw==
+
 scheduler@^0.20.1:
   version "0.20.2"
   resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.20.2.tgz#4baee39436e34aa93b4874bddcbf0fe8b8b50e91"
@@ -1397,6 +1424,16 @@ side-channel@^1.0.4:
     call-bind "^1.0.0"
     get-intrinsic "^1.0.2"
     object-inspect "^1.9.0"
+
+sitemap@^7.0.0:
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/sitemap/-/sitemap-7.0.0.tgz#022bef4df8cba42e38e1fe77039f234cab0372b6"
+  integrity sha512-Ud0jrRQO2k7fEtPAM+cQkBKoMvxQyPKNXKDLn8tRVHxRCsdDQ2JZvw+aZ5IRYYQVAV9iGxEar6boTwZzev+x3g==
+  dependencies:
+    "@types/node" "^15.0.1"
+    "@types/sax" "^1.2.1"
+    arg "^5.0.0"
+    sax "^1.2.4"
 
 source-map@0.7.3:
   version "0.7.3"
