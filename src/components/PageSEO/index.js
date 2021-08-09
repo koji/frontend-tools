@@ -19,7 +19,7 @@ export const PageSEO = ({ title }) => {
       />
       <meta
         name="google-site-verification"
-        content="yFEV7ljAJkrCTMlIRwO1lMEpbC5ZeSeJr2Il9eZL1CI"
+        content="Ulam6Eml3N7P9x88IViUfNV5xG3HXRWxLpZ-5cp0xaU"
       />
 
       <meta property="og:type" content="website" />
