@@ -11,10 +11,7 @@ export const PageSEO = ({ title }) => {
       />
       <meta name="description" content={config.siteMeta.description} />
       <meta name="author" content={config.siteMeta.author} />
-      <meta
-        name="keywords"
-        content="HTML, CSS, JavaScript, TypeScript, Frontend, Image, Tool, Web development, Frontend development"
-      />
+      <meta name="keywords" content={config.siteMeta.keywords} />
       <meta name="google-site-verification" content={config.siteMeta.gsc} />
 
       <meta property="og:type" content="website" />
