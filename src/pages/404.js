@@ -1,15 +1,14 @@
-import Link from "next/link";
-import { useEffect } from "react";
-import { useRouter } from "next/router";
-import Image from "next/image";
-import { PageSEO } from "../components/PageSEO";
+import { useEffect } from 'react';
+import { useRouter } from 'next/router';
+import Image from 'next/image';
+import PageSEO from '../components/PageSEO';
 
 export default function NotFound() {
   const router = useRouter();
 
   useEffect(() => {
     setTimeout(() => {
-      router.push("/");
+      router.push('/');
     }, 5000);
   }, []);
 

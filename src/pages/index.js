@@ -1,12 +1,12 @@
-import { createClient } from "contentful";
-import { ToolCardList } from "../components/ToolCardList";
-import { ToolCounter } from "../components/ToolCounter";
-import { SearchBar } from "../components/SearchBar";
-import { useState } from "react";
-import { PageSEO } from "../components/PageSEO";
+import { createClient } from 'contentful';
+import { useState } from 'react';
+import { ToolCardList } from '../components/ToolCardList';
+import { ToolCounter } from '../components/ToolCounter';
+import { SearchBar } from '../components/SearchBar';
+import PageSEO from '../components/PageSEO';
 
 export default function FETools({ tools, counter }) {
-  const [search, setSearch] = useState("");
+  const [search, setSearch] = useState('');
 
   const filteredTools = tools.filter((tool) =>
     tool.fields.description.toLowerCase().includes(search.toLowerCase())
@@ -19,7 +19,7 @@ export default function FETools({ tools, counter }) {
 
   return (
     <div className="container">
-      <PageSEO title={"home"} />
+      <PageSEO title="home" />
       <SearchBar
         type="text"
         placeholder="Type keyword to search tools"
@@ -39,7 +39,7 @@ export const getServerSideProps = async () => {
   });
 
   try {
-    const response = await client.getEntries({ content_type: "feTools" });
+    const response = await client.getEntries({ content_type: 'feTools' });
     // console.log(response.items.length);
     return {
       props: {
@@ -49,5 +49,6 @@ export const getServerSideProps = async () => {
     };
   } catch (error) {
     console.error(`getServerSideProps: ${error}`);
+    return {};
   }
 };
