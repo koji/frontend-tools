@@ -1,6 +1,6 @@
 import '../styles/globals.css';
-import { useEffect } from 'react';
 import { useRouter } from 'next/router';
+import { useEffect } from 'react';
 import Layout from '../components/Layout';
 import * as ga from '../lib/ga';
 
@@ -9,7 +9,7 @@ function MyApp({ Component, pageProps }) {
 
   useEffect(() => {
     const handleRouteChange = (url) => {
-      GainNode.pageViewed(url);
+      ga.pageViewed(url);
     };
     router.events.on('routeChangeComplete', handleRouteChange);
 

@@ -1,15 +1,15 @@
 import { createClient } from 'contentful';
 import { useState } from 'react';
+import { PageSEO } from '../components/PageSEO';
+import { SearchBar } from '../components/SearchBar';
 import { ToolCardList } from '../components/ToolCardList';
 import { ToolCounter } from '../components/ToolCounter';
-import { SearchBar } from '../components/SearchBar';
-import { PageSEO } from '../components/PageSEO';
 
 export default function FETools({ tools, counter }) {
   const [search, setSearch] = useState('');
 
   const filteredTools = tools.filter((tool) =>
-    tool.fields.description.toLowerCase().includes(search.toLowerCase())
+    tool.fields.description.toLowerCase().includes(search.toLowerCase()),
   );
 
   const handleChange = (e) => {
@@ -18,11 +18,11 @@ export default function FETools({ tools, counter }) {
   };
 
   return (
-    <div className="container">
-      <PageSEO title="home" />
+    <div className='container'>
+      <PageSEO title='home' />
       <SearchBar
-        type="text"
-        placeholder="Type keyword to search tools"
+        type='text'
+        placeholder='Type keyword to search tools'
         onChange={handleChange}
       />
       <ToolCounter counter={counter} />

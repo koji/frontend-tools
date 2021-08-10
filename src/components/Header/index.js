@@ -1,12 +1,12 @@
 import Link from 'next/link';
-import styles from './Header.module.css';
 import { HeaderLink } from '../HeaderLink';
+import styles from './Header.module.css';
 
 export const Header = () => (
   <header className={styles.container}>
     <HeaderLink />
-    <Link href="/">
-      <a className={styles.link}>
+    <Link href='/'>
+      <a href='passRef' className={styles.link}>
         <h1 className={styles.headers}>
           {/* <span className={styles.header__title__first}>Front</span>
             <span className={styles.header__title__second}>End</span>
