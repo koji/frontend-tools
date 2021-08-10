@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { ToolCardList } from '../components/ToolCardList';
 import { ToolCounter } from '../components/ToolCounter';
 import { SearchBar } from '../components/SearchBar';
-import PageSEO from '../components/PageSEO';
+import { PageSEO } from '../components/PageSEO';
 
 export default function FETools({ tools, counter }) {
   const [search, setSearch] = useState('');

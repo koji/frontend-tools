@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
-import PageSEO from '../components/PageSEO';
+import { PageSEO } from '../components/PageSEO';
 
 export default function NotFound() {
   const router = useRouter();

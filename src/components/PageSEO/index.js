@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import config from '../../../site.config';
 
-const PageSEO = ({ title }) => (
+export const PageSEO = ({ title }) => (
   <Head>
     <title>{`${config.siteMeta.title} - ${title}`}</title>
     <meta
@@ -35,5 +35,3 @@ const PageSEO = ({ title }) => (
     <meta property="twitter:image" content={config.siteMeta.image} />
   </Head>
 );
-
-export default PageSEO;

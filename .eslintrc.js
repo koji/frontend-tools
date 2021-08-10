@@ -13,7 +13,16 @@ module.exports = {
   },
   plugins: ['react'],
   rules: {
+    'import/prefer-default-export': false,
     'no-console': 'off',
+    'no-restricted-syntax': [
+      'error',
+      {
+        selector:
+          "CallExpression[callee.object.name='console'][callee.property.name!=/^(log|warn|error|info|trace)$/]",
+        message: 'Unexpected property on console object was called',
+      },
+    ],
     // 1: Turn off rules that are no longer necessary in React 17 and in Next.js
     'react/jsx-uses-react': 'off',
     'react/react-in-jsx-scope': 'off',
