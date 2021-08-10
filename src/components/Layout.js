@@ -1,13 +1,12 @@
-import Head from "next/head";
-import { Header } from "../components/Header";
-import { Footer } from "../components/Footer";
+import { Footer } from './Footer';
+import { Header } from './Header';
 
 export default function Layout({ children }) {
   return (
     <>
-      <div className="layout">
+      <div className='layout'>
         <Header />
-        <main className="page-content">{children}</main>
+        <main className='page-content'>{children}</main>
         <Footer />
       </div>
     </>

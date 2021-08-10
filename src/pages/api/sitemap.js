@@ -1,5 +1,5 @@
-import { SitemapStream, streamToPromise } from "sitemap";
-import { config } from "../../../site.config";
+import { SitemapStream, streamToPromise } from 'sitemap';
+import config from '../../../site.config';
 
 export default async (req, res) => {
   try {
@@ -10,13 +10,13 @@ export default async (req, res) => {
 
     // List of posts
     // const post_slugs = ["news-1", "news-2", "news-3"];
-    const post_slugs = ["/"];
+    const postSlugs = ['/'];
 
     // Create each URL row
-    post_slugs.forEach((post) => {
+    postSlugs.forEach((post) => {
       smStream.write({
         url: `${post}`,
-        changefreq: "daily",
+        changefreq: 'daily',
         priority: 0.9,
       });
     });
@@ -29,7 +29,7 @@ export default async (req, res) => {
 
     // Change headers
     res.writeHead(200, {
-      "Content-Type": "application/xml",
+      'Content-Type': 'application/xml',
     });
 
     // Display output to user
