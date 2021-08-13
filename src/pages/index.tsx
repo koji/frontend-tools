@@ -1,18 +1,27 @@
+import React from 'react';
 import { createClient } from 'contentful';
 import { useState } from 'react';
 import { PageSEO } from '../components/PageSEO';
 import { SearchBar } from '../components/SearchBar';
 import { ToolCardList } from '../components/ToolCardList';
 import { ToolCounter } from '../components/ToolCounter';
+import { IFeTools } from '../../@types/generated/contentful';
 
-export default function FETools({ tools, counter }) {
+export interface IndexProps {
+  tools: any[];
+  counter: number;
+}
+
+export default function FETools({ tools, counter }: IndexProps) {
   const [search, setSearch] = useState('');
+
+  console.log(tools[0]);
 
   const filteredTools = tools.filter((tool) =>
     tool.fields.description.toLowerCase().includes(search.toLowerCase()),
   );
 
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     e.preventDefault();
     setSearch(e.target.value.toLowerCase());
   };
@@ -34,8 +43,8 @@ export default function FETools({ tools, counter }) {
 export const getServerSideProps = async () => {
   // ToDo use .env for development & env var for production
   const client = createClient({
-    space: process.env.CONTENTFUL_SPACE_ID,
-    accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+    space: process.env.CONTENTFUL_SPACE_ID || '',
+    accessToken: process.env.CONTENTFUL_ACCESS_TOKEN || '',
   });
 
   try {
