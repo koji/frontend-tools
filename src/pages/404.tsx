@@ -2,8 +2,9 @@ import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 import { PageSEO } from '../components/PageSEO';
+import React from 'react';
 
-export default function NotFound() {
+const NotFound = () => {
   const router = useRouter();
 
   useEffect(() => {
@@ -20,4 +21,6 @@ export default function NotFound() {
       </div>
     </div>
   );
-}
+};
+
+export default NotFound;

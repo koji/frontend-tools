@@ -1,11 +1,11 @@
 import { SitemapStream, streamToPromise } from 'sitemap';
 import config from '../../../site.config';
 
-export default async (req, res) => {
+export default async (req: any, res: any) => {
   try {
     const smStream = new SitemapStream({
       hostname: config.siteMeta.url,
-      cacheTime: 600000,
+      // cacheTime: 600000,
     });
 
     // List of posts
