@@ -8,7 +8,9 @@
     "start": "next start",
     "lint": "eslint src --ext .js",
     "format": "prettier --write --ignore-path .gitignore './**/*.{js,jsx,ts,tsx,json,css}'",
-    "codegen": "contentful-typescript-codegen --output @types/generated/contentful.d.ts"
+    "codegen": "contentful-typescript-codegen --output @types/generated/contentful.d.ts",
+    "clean": "rimraf .next dist",
+    "build:types": "tsc --noEmit --pretty"
   },
   "dependencies": {
     "@contentful/rich-text-types": "^15.1.0",
@@ -35,7 +37,9 @@
     "eslint-plugin-next": "^0.0.0",
     "eslint-plugin-react": "^7.24.0",
     "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^7.0.1",
     "prettier": "^2.3.2",
+    "rimraf": "^3.0.2",
     "typescript": "^4.3.5"
   }
 }
