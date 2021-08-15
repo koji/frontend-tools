@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import { HeaderLink } from '../HeaderLink';
 import styles from './Header.module.css';
-import React from 'react';
 
 export const Header = () => (
   <header className={styles.container}>
