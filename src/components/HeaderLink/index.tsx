@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import { GoMarkGithub } from 'react-icons/go';
 import styles from './HeaderLink.module.css';
-import React from 'react';
 
 export const HeaderLink = () => (
   <div className={styles.container}>

@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import styles from './Footer.module.css';
-import React from 'react';
 
 export const Footer = () => (
   <footer className={styles.container}>

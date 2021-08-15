@@ -1,10 +1,9 @@
-import React from 'react';
 import { createClient } from 'contentful';
 import { useState } from 'react';
-import { PageSEO } from '../components/PageSEO';
-import { SearchBar } from '../components/SearchBar';
-import { ToolCardList } from '../components/ToolCardList';
-import { ToolCounter } from '../components/ToolCounter';
+import { PageSEO } from '@components/PageSEO';
+import { SearchBar } from '@components/SearchBar';
+import { ToolCardList } from '@components/ToolCardList';
+import { ToolCounter } from '@components/ToolCounter';
 import { IFeTools } from '../../@types/generated/contentful';
 
 export interface IndexProps {

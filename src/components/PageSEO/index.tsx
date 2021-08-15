@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import config from '../../../site.config';
-import React from 'react';
 
 interface ITitle {
   title: string;

@@ -1,6 +1,5 @@
 import { ToolCard } from '../ToolCard';
 import styles from './ToolCardList.module.css';
-import React from 'react';
 import { IFeToolsFields, IFeTools } from '../../../@types/generated/contentful';
 
 export const ToolCardList = ({ tools }: any) => (

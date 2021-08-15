@@ -1,5 +1,4 @@
 import styles from './ToolCounter.module.css';
-import React from 'react';
 
 interface Props {
   counter: number;
