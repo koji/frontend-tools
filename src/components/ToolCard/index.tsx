@@ -28,7 +28,6 @@ export const ToolCard = ({ tool }: any) => {
         <div className={styles.tool__actions}>
           <Link href={link}>
             <a
-              href='passRef'
               className={styles.tool__actions__link}
               target='_blank'
               rel='noopener'
