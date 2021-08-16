@@ -6,7 +6,7 @@ export const Header = () => (
   <header className={styles.container}>
     <HeaderLink />
     <Link href='/'>
-      <a href='passRef' className={styles.link}>
+      <a className={styles.link}>
         <h1 className={styles.headers}>
           {/* <span className={styles.header__title__first}>Front</span>
             <span className={styles.header__title__second}>End</span>
