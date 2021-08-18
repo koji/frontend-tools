@@ -1,10 +1,10 @@
-import { createClient } from 'contentful';
-import { useState } from 'react';
 import { PageSEO } from '@components/PageSEO';
 import { SearchBar } from '@components/SearchBar';
 import { ToolCardList } from '@components/ToolCardList';
 import { ToolCounter } from '@components/ToolCounter';
-import { IFeTools } from '../../@types/generated/contentful';
+import { createClient } from 'contentful';
+import { useState } from 'react';
+// import { IFeTools } from '../../@types/generated/contentful';
 
 export interface IndexProps {
   tools: any[];
@@ -14,11 +14,7 @@ export interface IndexProps {
 export default function FETools({ tools, counter }: IndexProps) {
   const [search, setSearch] = useState('');
 
-  console.log(tools[0]);
-
-  const filteredTools = tools.filter((tool) =>
-    tool.fields.description.toLowerCase().includes(search.toLowerCase()),
-  );
+  const filteredTools = tools.filter((tool) => tool.fields.description.toLowerCase().includes(search.toLowerCase()));
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     e.preventDefault();
@@ -26,11 +22,11 @@ export default function FETools({ tools, counter }: IndexProps) {
   };
 
   return (
-    <div className='container'>
-      <PageSEO title='home' />
+    <div className="container">
+      <PageSEO title="home" />
       <SearchBar
-        type='text'
-        placeholder='Type keyword to search tools'
+        type="text"
+        placeholder="Type keyword to search tools"
         onChange={handleChange}
       />
       <ToolCounter counter={counter} />
@@ -48,6 +44,7 @@ export const getServerSideProps = async () => {
 
   try {
     const response = await client.getEntries({ content_type: 'feTools' });
+
     // console.log(response.items.length);
     return {
       props: {
@@ -57,6 +54,7 @@ export const getServerSideProps = async () => {
     };
   } catch (error) {
     console.error(`getServerSideProps: ${error}`);
+
     return {};
   }
 };

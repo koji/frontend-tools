@@ -5,7 +5,7 @@ import styles from './Header.module.css';
 export const Header = () => (
   <header className={styles.container}>
     <HeaderLink />
-    <Link href='/'>
+    <Link href="/">
       <a className={styles.link}>
         <h1 className={styles.headers}>
           {/* <span className={styles.header__title__first}>Front</span>

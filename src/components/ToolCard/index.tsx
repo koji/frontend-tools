@@ -9,7 +9,9 @@ export const ToolCard = ({ tool }: any) => {
   // thumbnail: { fields: { file: string, title: string) }
   // link: string
   // category: string[]
-  const { title, description, thumbnail, link /* , category  */ } = tool;
+  const {
+    title, description, thumbnail, link /* , category  */ } = tool;
+
   return (
     <div className={styles.tool__card}>
       <div>
@@ -29,8 +31,8 @@ export const ToolCard = ({ tool }: any) => {
           <Link href={link}>
             <a
               className={styles.tool__actions__link}
-              target='_blank'
-              rel='noopener'
+              target="_blank"
+              rel="noopener"
             >
               Check this
             </a>
