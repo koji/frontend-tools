@@ -6,10 +6,17 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint 'src/**/*.{js,jsx,ts,tsx}'",
-    "lint:fix": "eslint --fix 'src/**/*.{js,jsx,ts,tsx}'",
+    "lint": "yarn -s lint:style; yarn -s lint:es",
+    "lint:fix": "npm run -s lint:style:fix && npm run -s lint:es:fix",
+    "lint:es": "eslint 'src/**/*.{js,jsx,ts,tsx}'",
+    "lint:es:fix": "eslint --fix 'src/**/*.{js,jsx,ts,tsx}'",
+    "lint:conflict": "eslint--print-config.eslintrc.js|eslint-config-prettier-check",
+    "lint:style": "stylelint 'src/**/*.{css,less,sass,scss}'",
+    "lint:style:fix": "stylelint --fix 'src/**/*.{css,less,sass,scss}'",
     "preinstall": "typesync || :",
-    "format": "prettier --write --ignore-path .gitignore './**/*.{js,jsx,ts,tsx,json,css}'",
+    "prepare": "simple-git-hooks > /dev/null",
+    "format": "prettier --write --loglevel=warn '{public,src}/**/*.{js,jsx,ts,tsx,html,gql,graphql,json}'",
+    "fix": "yarn -s format && yarn -s lint:fix",
     "codegen": "contentful-typescript-codegen --output @types/generated/contentful.d.ts",
     "clean": "rimraf .next dist",
     "build:types": "tsc --noEmit --pretty"
@@ -32,6 +39,7 @@
     "@types/react": "^17.0.18",
     "@types/react-dom": "17.0.2",
     "@types/rimraf": "^3.0.1",
+    "@types/stylelint": "^13.13.1",
     "@typescript-eslint/eslint-plugin": "^4.29.2",
     "@typescript-eslint/parser": "^4.29.2",
     "contentful-management": "^7.32.0",
@@ -43,11 +51,33 @@
     "eslint-plugin-import": "^2.24.0",
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-next": "^0.0.0",
+    "eslint-plugin-prefer-arrow": "^1.2.3",
     "eslint-plugin-react": "^7.24.0",
     "eslint-plugin-react-hooks": "^4.2.0",
     "husky": "^7.0.1",
+    "lint-staged": "^11.1.2",
     "prettier": "^2.3.2",
     "rimraf": "^3.0.2",
+    "simple-git-hooks": "^2.6.1",
+    "stylelint": "^13.13.1",
+    "stylelint-config-recess-order": "^2.5.0",
+    "stylelint-config-standard": "^22.0.0",
+    "stylelint-order": "^4.1.0",
     "typescript": "^4.3.5"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged"
+  },
+  "lint-staged": {
+    "src/**/*.{js, jsx, ts, tsx}": [
+      "prettier --write --loglevel=error",
+      "eslint --fix --quiet"
+    ],
+    "src/**/*.{css, less, sass, scss}": [
+      "stylelint --fix --quiet"
+    ],
+    "{public, src}/**/*.{html, gql, graphql, json}": [
+      "prettier --write --loglevel=error"
+    ]
   }
 }

@@ -13,10 +13,10 @@ const NotFound = () => {
   }, []);
 
   return (
-    <div className="not-found">
-      <PageSEO title="404: Not Found" />
+    <div className='not-found'>
+      <PageSEO title='404: Not Found' />
       <div>
-        <Image alt="Not Found" src="/images/404.png" height={400} width={714} />
+        <Image alt='Not Found' src='/images/404.png' height={400} width={714} />
       </div>
     </div>
   );

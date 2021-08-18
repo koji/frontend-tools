@@ -11,10 +11,12 @@ export interface IndexProps {
   counter: number;
 }
 
-export default function FETools({ tools, counter }: IndexProps) {
+const FETools = ({ tools, counter }: IndexProps) => {
   const [search, setSearch] = useState('');
 
-  const filteredTools = tools.filter((tool) => tool.fields.description.toLowerCase().includes(search.toLowerCase()));
+  const filteredTools = tools.filter((tool) =>
+    tool.fields.description.toLowerCase().includes(search.toLowerCase()),
+  );
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     e.preventDefault();
@@ -22,18 +24,14 @@ export default function FETools({ tools, counter }: IndexProps) {
   };
 
   return (
-    <div className="container">
-      <PageSEO title="home" />
-      <SearchBar
-        type="text"
-        placeholder="Type keyword to search tools"
-        onChange={handleChange}
-      />
+    <div className='container'>
+      <PageSEO title='home' />
+      <SearchBar type='text' placeholder='Type keyword to search tools' onChange={handleChange} />
       <ToolCounter counter={counter} />
       <ToolCardList tools={filteredTools} />
     </div>
   );
-}
+};
 
 export const getServerSideProps = async () => {
   // ToDo use .env for development & env var for production
@@ -53,8 +51,11 @@ export const getServerSideProps = async () => {
       },
     };
   } catch (error) {
+    // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
     console.error(`getServerSideProps: ${error}`);
 
     return {};
   }
 };
+
+export default FETools;

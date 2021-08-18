@@ -1,12 +1,12 @@
 .container {
-  background: #111;
-  color: #bbb;
   padding: 40px;
-  text-align: center;
   margin-top: auto;
+  color: #bbb;
+  text-align: center;
+  background: #111;
 }
 
 .link {
-  text-decoration: none;
   color: #5930e5;
+  text-decoration: none;
 }

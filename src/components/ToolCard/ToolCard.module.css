@@ -1,43 +1,50 @@
 .tool__card {
-  transform: rotateZ(-1deg);
   max-width: 320px;
+  transform: rotateZ(-1deg);
 }
 
 .tool__content {
-  /* background: #fff; */
-  background: #242629;
-  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
-  margin: 0;
   position: relative;
   top: -40px;
   left: -10px;
+  margin: 0;
+
+  /* background: #fff; */
+  background: #242629;
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
 }
 
 .tool__info {
   padding: 16px;
 }
+
 .tool__card__title {
-  color: #fffffe;
   margin: 4px 0;
-  text-transform: uppercase;
   font-size: 1.2rem;
+  color: #fffffe;
+  text-transform: uppercase;
 }
+
 .tool__card__description {
-  color: #94a1b2;
   margin: 0;
   font-size: 1.1rem;
+  color: #94a1b2;
+
   /* color: #fff; */
 }
+
 .tool__actions {
-  margin-top: 20px;
   display: flex;
   justify-content: flex-end;
+  margin-top: 20px;
 }
+
 .tool__actions__link {
-  color: #fff;
+  padding: 16px 24px;
   font-size: 0.75em;
+  color: #fff;
+  text-decoration: none;
+
   /* background: #f01b29; */
   background: #7f5af0;
-  padding: 16px 24px;
-  text-decoration: none;
 }

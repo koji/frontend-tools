@@ -12,6 +12,7 @@ module.exports = {
     'plugin:import/typescript',
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
+    'prettier',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -47,6 +48,14 @@ module.exports = {
         blankLine: 'always',
         prev: '*',
         next: 'return',
+      },
+    ],
+    'prefer-arrow/prefer-arrow-functions': [
+      'warn',
+      {
+        disallowPrototype: true,
+        singleReturnOnly: false,
+        classPropertiesAllowed: false,
       },
     ],
     '@typescript-eslint/no-unused-vars': [
@@ -107,7 +116,7 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': 'off',
     'unused-imports/no-unused-imports': 'error',
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }], // should add ".ts" if typescript project
-    semi: ['error', 'always'], // semicolon
+    // semi: ['error', 'always'], // semicolon
     'import/order': [
       'error',
       {
