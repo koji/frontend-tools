@@ -1,6 +1,6 @@
+import { IFeToolsFields, IFeTools } from '../../../@types/generated/contentful';
 import { ToolCard } from '../ToolCard';
 import styles from './ToolCardList.module.css';
-import { IFeToolsFields, IFeTools } from '../../../@types/generated/contentful';
 
 export const ToolCardList = ({ tools }: any) => (
   <div className={styles.tool__list}>

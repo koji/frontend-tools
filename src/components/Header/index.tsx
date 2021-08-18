@@ -13,9 +13,7 @@ export const Header = () => (
             <span className={styles.header__title__third}>Tools</span> */}
           <span className={styles.header__title}>Frontend Tools</span>
         </h1>
-        <h2 className={`${styles.headers} ${styles.header__subtitle}`}>
-          Spread Joy & Usefulness
-        </h2>
+        <h2 className={`${styles.headers} ${styles.header__subtitle}`}>Spread Joy & Usefulness</h2>
       </a>
     </Link>
   </header>

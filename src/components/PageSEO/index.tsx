@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import { FC } from 'react';
 import config from '../../../site.config';
 
 interface ITitle {
@@ -8,10 +9,7 @@ interface ITitle {
 export const PageSEO = ({ title }: ITitle) => (
   <Head>
     <title>{`${config.siteMeta.title} - ${title}`}</title>
-    <meta
-      name='title'
-      content={`${config.siteMeta.title} | ${config.siteMeta.subTitle} `}
-    />
+    <meta name='title' content={`${config.siteMeta.title} | ${config.siteMeta.subTitle} `} />
     <meta name='description' content={config.siteMeta.description} />
     <meta name='author' content={config.siteMeta.author} />
     <meta name='keywords' content={config.siteMeta.keywords} />
@@ -19,10 +17,7 @@ export const PageSEO = ({ title }: ITitle) => (
 
     <meta property='og:type' content='website' />
     <meta property='og:url' content={config.siteMeta.url} />
-    <meta
-      property='og:title'
-      content={`${config.siteMeta.title} | ${config.siteMeta.subTitle} `}
-    />
+    <meta property='og:title' content={`${config.siteMeta.title} | ${config.siteMeta.subTitle} `} />
     <meta property='og:description' content={config.siteMeta.description} />
     <meta property='og:image' content={config.siteMeta.image} />
 
@@ -32,10 +27,7 @@ export const PageSEO = ({ title }: ITitle) => (
       property='twitter:title'
       content={`${config.siteMeta.title} | ${config.siteMeta.subTitle} `}
     />
-    <meta
-      property='twitter:description'
-      content={config.siteMeta.description}
-    />
+    <meta property='twitter:description' content={config.siteMeta.description} />
     <meta property='twitter:image' content={config.siteMeta.image} />
   </Head>
 );

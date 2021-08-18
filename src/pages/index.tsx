@@ -1,20 +1,18 @@
-import { createClient } from 'contentful';
-import { useState } from 'react';
 import { PageSEO } from '@components/PageSEO';
 import { SearchBar } from '@components/SearchBar';
 import { ToolCardList } from '@components/ToolCardList';
 import { ToolCounter } from '@components/ToolCounter';
-import { IFeTools } from '../../@types/generated/contentful';
+import { createClient } from 'contentful';
+import { useState } from 'react';
+// import { IFeTools } from '../../@types/generated/contentful';
 
 export interface IndexProps {
   tools: any[];
   counter: number;
 }
 
-export default function FETools({ tools, counter }: IndexProps) {
+const FETools = ({ tools, counter }: IndexProps) => {
   const [search, setSearch] = useState('');
-
-  console.log(tools[0]);
 
   const filteredTools = tools.filter((tool) =>
     tool.fields.description.toLowerCase().includes(search.toLowerCase()),
@@ -28,16 +26,12 @@ export default function FETools({ tools, counter }: IndexProps) {
   return (
     <div className='container'>
       <PageSEO title='home' />
-      <SearchBar
-        type='text'
-        placeholder='Type keyword to search tools'
-        onChange={handleChange}
-      />
+      <SearchBar type='text' placeholder='Type keyword to search tools' onChange={handleChange} />
       <ToolCounter counter={counter} />
       <ToolCardList tools={filteredTools} />
     </div>
   );
-}
+};
 
 export const getServerSideProps = async () => {
   // ToDo use .env for development & env var for production
@@ -48,6 +42,7 @@ export const getServerSideProps = async () => {
 
   try {
     const response = await client.getEntries({ content_type: 'feTools' });
+
     // console.log(response.items.length);
     return {
       props: {
@@ -56,7 +51,11 @@ export const getServerSideProps = async () => {
       },
     };
   } catch (error) {
+    // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
     console.error(`getServerSideProps: ${error}`);
+
     return {};
   }
 };
+
+export default FETools;

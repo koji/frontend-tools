@@ -10,6 +10,7 @@ export const ToolCard = ({ tool }: any) => {
   // link: string
   // category: string[]
   const { title, description, thumbnail, link /* , category  */ } = tool;
+
   return (
     <div className={styles.tool__card}>
       <div>
@@ -27,11 +28,7 @@ export const ToolCard = ({ tool }: any) => {
         </div>
         <div className={styles.tool__actions}>
           <Link href={link}>
-            <a
-              className={styles.tool__actions__link}
-              target='_blank'
-              rel='noopener'
-            >
+            <a className={styles.tool__actions__link} target='_blank' rel='noopener'>
               Check this
             </a>
           </Link>

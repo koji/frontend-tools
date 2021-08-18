@@ -1,9 +1,9 @@
 import '../styles/globals.css';
+import Layout from '@components/Layout';
+import { AppProps } from 'next/app';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
-import Layout from '@components/Layout';
 import * as ga from '../lib/ga';
-import { AppProps } from 'next/app';
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();

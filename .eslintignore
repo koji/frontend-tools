@@ -1,4 +1,7 @@
-# .estlintignore file
-.next
-dist
-node_modules/
+build/
+public/
+**/coverage/
+**/node_modules/
+**/*.min.js
+*.config.js
+.*lintrc.js
