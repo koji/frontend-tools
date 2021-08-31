@@ -24,7 +24,7 @@
   "dependencies": {
     "@contentful/rich-text-types": "^15.1.0",
     "contentful": "^8.4.4",
-    "next": "11.1.0",
+    "next": "11.1.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-icons": "^4.2.0",
