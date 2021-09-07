@@ -16,11 +16,11 @@ type ContentType = {
 
 export type FieldType = {
   title: string;
-  thumbnail?: Asset | undefined;
+  thumbnail: Asset;
   link: string;
   tag?: TagType | undefined;
   description?: string | undefined;
-  category: 'font' | 'html/css' | 'image' | 'js/ts' | 'other';
+  category?: 'font' | 'html/css' | 'image' | 'js/ts' | 'other';
 };
 
 export type ToolType = {
