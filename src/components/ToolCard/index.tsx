@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { FieldType } from '../../Types';
+// import { FieldType } from '../../Types';
 import styles from './ToolCard.module.css';
 
-export const ToolCard = ({ tool }: ToolField) => {
+export const ToolCard = ({ tool }: any) => {
   const { title, description, thumbnail, link /* , category  */ } = tool;
 
   return (

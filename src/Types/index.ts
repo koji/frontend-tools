@@ -20,7 +20,7 @@ export type FieldType = {
   link: string;
   tag?: TagType | undefined;
   description?: string | undefined;
-  category?: 'font' | 'html/css' | 'image' | 'js/ts' | 'other' | undefined;
+  category: 'font' | 'html/css' | 'image' | 'js/ts' | 'other';
 };
 
 export type ToolType = {
