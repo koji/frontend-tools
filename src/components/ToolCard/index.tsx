@@ -1,14 +1,13 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { FieldType } from '../../Types';
 import styles from './ToolCard.module.css';
-// import { IFeToolsFields } from '../../../@types/generated/contentful';
 
-export const ToolCard = ({ tool }: any) => {
-  // title: string;
-  // description: string
-  // thumbnail: { fields: { file: string, title: string) }
-  // link: string
-  // category: string[]
+interface ToolCardProps {
+  tool: FieldType;
+}
+
+export const ToolCard = ({ tool }: ToolCardProps) => {
   const { title, description, thumbnail, link /* , category  */ } = tool;
 
   return (
@@ -17,8 +16,8 @@ export const ToolCard = ({ tool }: any) => {
         <Image
           alt={thumbnail.fields.title}
           src={`https:${thumbnail.fields.file.url}`}
-          width={thumbnail.fields.file.details.image.width}
-          height={thumbnail.fields.file.details.image.height}
+          width={thumbnail.fields.file.details.image?.width}
+          height={thumbnail.fields.file.details.image?.height}
         />
       </div>
       <div className={styles.tool__content}>

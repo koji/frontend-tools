@@ -35,6 +35,6 @@ export default async (req: any, res: any) => {
     // Display output to user
     res.end(sitemapOutput);
   } catch (e) {
-    console.log(e);
+    console.log('sitemap error ', e);
   }
 };

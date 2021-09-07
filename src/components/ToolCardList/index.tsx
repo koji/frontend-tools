@@ -1,10 +1,14 @@
-import { IFeToolsFields, IFeTools } from '../../../@types/generated/contentful';
+import { ToolType } from '../../Types';
 import { ToolCard } from '../ToolCard';
 import styles from './ToolCardList.module.css';
 
-export const ToolCardList = ({ tools }: any) => (
+interface ToolCardProps {
+  tools: ToolType[];
+}
+
+export const ToolCardList = ({ tools }: ToolCardProps) => (
   <div className={styles.tool__list}>
-    {tools.map((tool: IFeTools) => (
+    {tools.map((tool: ToolType) => (
       <ToolCard key={tool.sys.id} tool={tool.fields} />
     ))}
   </div>

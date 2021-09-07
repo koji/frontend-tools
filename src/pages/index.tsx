@@ -4,19 +4,21 @@ import { ToolCardList } from '@components/ToolCardList';
 import { ToolCounter } from '@components/ToolCounter';
 import { createClient } from 'contentful';
 import { useState } from 'react';
-// import { IFeTools } from '../../@types/generated/contentful';
+import { ToolType } from '../Types';
 
-export interface IndexProps {
-  tools: any[];
+interface IndexProps {
+  tools: ToolType[];
   counter: number;
 }
 
 const FETools = ({ tools, counter }: IndexProps) => {
   const [search, setSearch] = useState('');
 
-  const filteredTools = tools.filter((tool) =>
-    tool.fields.description.toLowerCase().includes(search.toLowerCase()),
-  );
+  const filteredTools: ToolType[] = tools.filter((tool: ToolType) => {
+    if (tool.fields.description) {
+      return tool.fields.description.toLowerCase().includes(search.toLowerCase());
+    }
+  });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     e.preventDefault();
@@ -24,6 +26,7 @@ const FETools = ({ tools, counter }: IndexProps) => {
   };
 
   return (
+    // eslint-disable-next-line react/jsx-filename-extension
     <div className='container'>
       <PageSEO title='home' />
       <SearchBar type='text' placeholder='Type keyword to search tools' onChange={handleChange} />
@@ -43,7 +46,8 @@ export const getServerSideProps = async () => {
   try {
     const response = await client.getEntries({ content_type: 'feTools' });
 
-    // console.log(response.items.length);
+    // console.log(response.items[0].sys.environment);
+
     return {
       props: {
         tools: response.items,
