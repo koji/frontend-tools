@@ -6,7 +6,7 @@ import { createClient } from 'contentful';
 import { useState } from 'react';
 import { ToolType } from '../Types';
 
-export interface IndexProps {
+interface IndexProps {
   tools: ToolType[];
   counter: number;
 }
@@ -14,7 +14,7 @@ export interface IndexProps {
 const FETools = ({ tools, counter }: IndexProps) => {
   const [search, setSearch] = useState('');
 
-  const filteredTools = tools.filter((tool: ToolType) => {
+  const filteredTools: ToolType[] = tools.filter((tool: ToolType) => {
     if (tool.fields.description) {
       return tool.fields.description.toLowerCase().includes(search.toLowerCase());
     }
@@ -26,6 +26,7 @@ const FETools = ({ tools, counter }: IndexProps) => {
   };
 
   return (
+    // eslint-disable-next-line react/jsx-filename-extension
     <div className='container'>
       <PageSEO title='home' />
       <SearchBar type='text' placeholder='Type keyword to search tools' onChange={handleChange} />
