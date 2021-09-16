@@ -1,7 +1,7 @@
 const securityHeaders = [
   {
     key: 'Content-Security-Policy',
-    value: "default-src fetools.vercel.app 'self' data: 'unsafe-inline'",
+    value: 'default-src fetools.vercel.app',
   },
 ];
 
