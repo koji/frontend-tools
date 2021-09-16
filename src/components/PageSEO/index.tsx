@@ -29,5 +29,7 @@ export const PageSEO = ({ title }: ITitle) => (
     />
     <meta property='twitter:description' content={config.siteMeta.description} />
     <meta property='twitter:image' content={config.siteMeta.image} />
+    <meta http-equiv="Content-Security-Policy" content="script-src 'none'">
+
   </Head>
 );
