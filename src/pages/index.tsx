@@ -1,15 +1,15 @@
 import { PageSEO } from '@components/PageSEO';
 import { SearchBar } from '@components/SearchBar';
-import { ToolCardList } from '@components/ToolCardList';
+// import { ToolCardList } from '@components/ToolCardList';
 import { ToolCounter } from '@components/ToolCounter';
 import { createClient } from 'contentful';
-// import dynamic from 'next/dynamic';
+import dynamic from 'next/dynamic';
 import { useState } from 'react';
 import { ToolType } from '../Types';
 
-// const ToolCardList = dynamic<any>(() =>
-//   import('../components/ToolCardList').then((mod) => mod.ToolCardList),
-// );
+const ToolCardList = dynamic<any>(() =>
+  import('../components/ToolCardList').then((mod) => mod.ToolCardList),
+);
 
 interface IndexProps {
   tools: ToolType[];
