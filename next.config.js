@@ -1,9 +1,9 @@
-const securityHeaders = [
-  {
-    key: 'Content-Security-Policy',
-    value: 'default-src fetools.vercel.app',
-  },
-];
+// const securityHeaders = [
+//   {
+//     key: 'Content-Security-Policy',
+//     value: 'default-src fetools.vercel.app',
+//   },
+// ];
 
 module.exports = {
   images: {
@@ -14,13 +14,13 @@ module.exports = {
   },
   basePath: '',
   reactStrictMode: true,
-  async headers() {
-    return [
-      {
-        // Apply these headers to all routes in your application.
-        source: '/(.*)',
-        headers: securityHeaders,
-      },
-    ];
-  },
+  // async headers() {
+  //   return [
+  //     {
+  //       // Apply these headers to all routes in your application.
+  //       source: '/(.*)',
+  //       headers: securityHeaders,
+  //     },
+  //   ];
+  // },
 };
