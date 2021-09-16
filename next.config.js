@@ -1,3 +1,10 @@
+const securityHeaders = [
+  {
+    key: 'Content-Security-Policy',
+    value: "default-src fetools.vercel.app 'self' data: 'unsafe-inline'",
+  },
+];
+
 module.exports = {
   images: {
     domains: ['images.ctfassets.net'],
@@ -7,4 +14,13 @@ module.exports = {
   },
   basePath: '',
   reactStrictMode: true,
+  async headers() {
+    return [
+      {
+        // Apply these headers to all routes in your application.
+        source: '/(.*)',
+        headers: securityHeaders,
+      },
+    ];
+  },
 };
