@@ -13,7 +13,7 @@ import { ToolType } from '../Types';
 // );
 
 interface IndexProps {
-  tools: ToolType[];
+  tools: Array<ToolType[]>;
   counter: number;
   loading: boolean;
 }
@@ -26,8 +26,9 @@ const FETools = ({ tools, counter, loading }: IndexProps) => {
   useEffect(() => {
     // console.log('all data ', tools);
     if (loading) return;
-    setData(tools[page]);
-  }, [tools, page]);
+    const tmpData = tools[page];
+    setData(tmpData);
+  }, [tools, page, loading]);
 
   const handlePage = (index: number) => {
     setPage(index);
