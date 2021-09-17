@@ -44,3 +44,67 @@ body {
   box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
   transform: rotateZ(-1deg);
 }
+
+/*
+===============
+Pagination
+===============
+*/
+.btn {
+  padding: 0.35rem 0.75rem;
+  font-size: 0.75rem;
+  color: var(--clr-white);
+  text-transform: uppercase;
+  letter-spacing: 1.6px;
+  cursor: pointer;
+  background: #16161a;
+  border-color: transparent;
+  border-radius: var(--radius);
+  transition: var(--transition);
+}
+
+.btn:hover {
+  background-color: #fff;
+}
+
+.btn-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.page-btn {
+  width: 2rem;
+  height: 2rem;
+  margin: 0.5rem;
+  cursor: pointer;
+  background: #7f5bf0;
+  border-color: transparent;
+  border-radius: 50%;
+  transition: var(--transition);
+}
+
+.active-btn {
+  color: var(--clr-white);
+  background: #a83dda;
+}
+
+.prev-btn,
+.next-btn {
+  margin: 0.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: rgb(100, 100, 100);
+  text-transform: capitalize;
+  letter-spacing: var(--spacing);
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+}
+
+@media screen and (min-width: 775px) {
+  .btn-container {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+}

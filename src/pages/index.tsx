@@ -1,5 +1,5 @@
 import { PageSEO } from '@components/PageSEO';
-import { SearchBar } from '@components/SearchBar';
+// import { SearchBar } from '@components/SearchBar';
 import { ToolCardList } from '@components/ToolCardList';
 import { ToolCounter } from '@components/ToolCounter';
 import { paginate } from '@utils/utils';
