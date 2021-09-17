@@ -76,7 +76,11 @@ const FETools = ({ tools, counter, loading }: IndexProps) => {
           <section>
             <ToolCardList tools={data} />
             <div className='btn-container'>
-              <button className='btn next-btn' onClick={() => prevPage()}>
+              <button
+                aria-label='previous page'
+                className='btn next-btn'
+                onClick={() => prevPage()}
+              >
                 {!loading ? 'Previous' : null}
               </button>
               {loading
@@ -92,7 +96,7 @@ const FETools = ({ tools, counter, loading }: IndexProps) => {
                       {index + 1}
                     </button>
                   ))}
-              <button className='btn next-btn' onClick={() => nextPage()}>
+              <button aria-label='next page' className='btn next-btn' onClick={() => nextPage()}>
                 {!loading ? 'Next' : null}
               </button>
             </div>
