@@ -94,7 +94,9 @@ Pagination
   margin: 0.5rem;
   font-size: 1rem;
   font-weight: bold;
-  color: rgb(100, 100, 100);
+
+  /* color: rgb(100, 100, 100); */
+  color: #93a1b1;
   text-transform: capitalize;
   letter-spacing: var(--spacing);
   cursor: pointer;
