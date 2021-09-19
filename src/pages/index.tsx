@@ -1,5 +1,5 @@
 import { PageSEO } from '@components/PageSEO';
-// import { SearchBar } from '@components/SearchBar';
+import { SearchBar } from '@components/SearchBar';
 import { ToolCardList } from '@components/ToolCardList';
 import { ToolCounter } from '@components/ToolCounter';
 import { paginate } from '@utils/utils';
@@ -19,7 +19,7 @@ interface IndexProps {
 }
 
 const FETools = ({ tools, counter, loading }: IndexProps) => {
-  // const [search, setSearch] = useState('');
+  const [search, setSearch] = useState('');
   const [page, setPage] = useState<number>(0);
   const [data, setData] = useState<ToolType[]>([]);
 
@@ -53,16 +53,16 @@ const FETools = ({ tools, counter, loading }: IndexProps) => {
   };
 
   // simple search part
-  // const filteredTools: ToolType[] = tools.filter((tool: ToolType) => {
-  //   if (tool.fields.description) {
-  //     return tool.fields.description.toLowerCase().includes(search.toLowerCase());
-  //   }
-  // });
+  const filteredTools: ToolType[] = data.filter((tool: ToolType) => {
+    if (tool.fields.description) {
+      return tool.fields.description.toLowerCase().includes(search.toLowerCase());
+    }
+  });
 
-  // const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-  //   e.preventDefault();
-  //   setSearch(e.target.value.toLowerCase());
-  // };
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    e.preventDefault();
+    setSearch(e.target.value.toLowerCase());
+  };
   // simple search part
 
   return (
@@ -71,10 +71,14 @@ const FETools = ({ tools, counter, loading }: IndexProps) => {
       <PageSEO title='home' />
       <main>
         <div className='container'>
-          {/* <SearchBar type='text' placeholder='Type keyword to search tools' onChange={handleChange} /> */}
+          <SearchBar
+            type='text'
+            placeholder='Type keyword to search tools'
+            onChange={handleChange}
+          />
           <ToolCounter counter={counter} />
           <section>
-            <ToolCardList tools={data} />
+            <ToolCardList tools={filteredTools} />
             <div className='btn-container'>
               <button
                 aria-label='previous page'
