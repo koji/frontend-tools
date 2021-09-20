@@ -24,6 +24,11 @@ const FETools = ({ tools, counter, loading }: IndexProps) => {
   const [page, setPage] = useState<number>(0);
   const [data, setData] = useState<ToolType[]>([]);
 
+  // get page number from Pagination component
+  const updatePage = (pageFromBtn: number): void => {
+    setPage(pageFromBtn);
+  };
+
   useEffect(() => {
     // console.log('all data ', tools);
     if (loading) return;
@@ -80,7 +85,7 @@ const FETools = ({ tools, counter, loading }: IndexProps) => {
           <ToolCounter counter={counter} />
           <section>
             <ToolCardList tools={filteredTools} />
-            <Pagination loading={loading} tools={tools} page={page} />
+            <Pagination loading={loading} tools={tools} page={page} updatePage={updatePage} />
           </section>
         </div>
       </main>
