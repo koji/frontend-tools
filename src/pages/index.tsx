@@ -1,4 +1,5 @@
 import { PageSEO } from '@components/PageSEO';
+import { Pagination } from '@components/Pagination';
 import { SearchBar } from '@components/SearchBar';
 import { ToolCardList } from '@components/ToolCardList';
 import { ToolCounter } from '@components/ToolCounter';
@@ -22,6 +23,11 @@ const FETools = ({ tools, counter, loading }: IndexProps) => {
   const [search, setSearch] = useState('');
   const [page, setPage] = useState<number>(0);
   const [data, setData] = useState<ToolType[]>([]);
+
+  // get page number from Pagination component
+  const updatePage = (pageFromBtn: number): void => {
+    setPage(pageFromBtn);
+  };
 
   useEffect(() => {
     // console.log('all data ', tools);
@@ -79,31 +85,7 @@ const FETools = ({ tools, counter, loading }: IndexProps) => {
           <ToolCounter counter={counter} />
           <section>
             <ToolCardList tools={filteredTools} />
-            <div className='btn-container'>
-              <button
-                aria-label='previous page'
-                className='btn next-btn'
-                onClick={() => prevPage()}
-              >
-                {!loading ? 'Previous' : null}
-              </button>
-              {loading
-                ? null
-                : tools.map((item, index) => (
-                    <button
-                      key={index}
-                      className={`page-btn ${index === page ? 'active-btn' : null}`}
-                      onClick={() => {
-                        handlePage(index);
-                      }}
-                    >
-                      {index + 1}
-                    </button>
-                  ))}
-              <button aria-label='next page' className='btn next-btn' onClick={() => nextPage()}>
-                {!loading ? 'Next' : null}
-              </button>
-            </div>
+            <Pagination loading={loading} tools={tools} page={page} updatePage={updatePage} />
           </section>
         </div>
       </main>
