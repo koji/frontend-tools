@@ -5,7 +5,10 @@
 //   },
 // ];
 
-module.exports = {
+const withPWA = require('next-pwa');
+
+module.exports = withPWA({
+  // pwa
   images: {
     domains: ['images.ctfassets.net'],
   },
@@ -14,6 +17,7 @@ module.exports = {
   },
   basePath: '',
   reactStrictMode: true,
+  pwa: { dest: 'public' }, // pwa
   // async headers() {
   //   return [
   //     {
@@ -23,4 +27,4 @@ module.exports = {
   //     },
   //   ];
   // },
-};
+});
