@@ -19,6 +19,7 @@ interface IndexProps {
   loading: boolean;
 }
 
+// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 const FETools = ({ tools, counter, loading }: IndexProps) => {
   const [search, setSearch] = useState('');
   const [page, setPage] = useState<number>(0);
