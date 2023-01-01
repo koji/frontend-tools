@@ -94,6 +94,7 @@ const FETools = ({ tools, counter, loading }: IndexProps) => {
   );
 };
 
+// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 export const getServerSideProps = async () => {
   // ToDo use .env for development & env var for production
   const client = createClient({
