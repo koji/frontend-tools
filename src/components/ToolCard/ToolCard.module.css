@@ -1,25 +1,25 @@
 .tool__card {
-  max-width: 320px;
+  max-width: 20rem;
   transform: rotateZ(-1deg);
 }
 
 .tool__content {
   position: relative;
-  top: -40px;
-  left: -10px;
+  top: -2.5rem;
+  left: -0.625rem;
   margin: 0;
 
   /* background: #fff; */
   background: #242629;
-  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0.0625rem 0.1875rem 0.3125rem rgba(0, 0, 0, 0.1);
 }
 
 .tool__info {
-  padding: 16px;
+  padding: 1rem;
 }
 
 .tool__card__title {
-  margin: 4px 0;
+  margin: 0.25rem 0;
   font-size: 1.2rem;
   color: #fffffe;
   text-transform: uppercase;
@@ -36,12 +36,12 @@
 .tool__actions {
   display: flex;
   justify-content: flex-end;
-  margin-top: 20px;
+  margin-top: 1.25rem;
 }
 
 .tool__actions__link {
-  padding: 16px 24px;
-  font-size: 0.75em;
+  padding: 1rem 1.5rem;
+  font-size: 0.75rem;
   color: #fff;
   text-decoration: none;
 
