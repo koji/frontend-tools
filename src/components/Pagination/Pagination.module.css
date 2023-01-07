@@ -8,7 +8,7 @@ Pagination
   font-size: 0.75rem;
   color: var(--clr-white);
   text-transform: uppercase;
-  letter-spacing: 1.6px;
+  letter-spacing: 0.1rem;
   cursor: pointer;
   background: #16161a;
   border-color: transparent;
@@ -57,9 +57,9 @@ Pagination
   border-color: transparent;
 }
 
-@media screen and (min-width: 775px) {
+@media screen and (min-width: 48.4375rem) {
   .btn-container {
-    max-width: 700px;
+    max-width: 43.75rem;
     margin: 0 auto;
   }
 }
