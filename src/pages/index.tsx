@@ -5,9 +5,9 @@ import { ToolCardList } from '@components/ToolCardList';
 import { ToolCounter } from '@components/ToolCounter';
 import { paginate } from '@utils/utils';
 import { createClient } from 'contentful';
-// import dynamic from 'next/dynamic';
 import { useState, useEffect } from 'react';
-import { ToolType } from '../Types';
+// import dynamic from 'next/dynamic';
+import type { ToolType } from '../Types';
 
 // const ToolCardList = dynamic<any>(() =>
 //   import('../components/ToolCardList').then((mod) => mod.ToolCardList),
