@@ -2,11 +2,12 @@ import Head from 'next/head';
 import { FC } from 'react';
 import config from '../../../site.config';
 
-interface ITitle {
+interface TitleProps {
   title: string;
 }
 
-export const PageSEO = ({ title }: ITitle) => (
+export const PageSEO = ({ title }: TitleProps) => (
+  // eslint-disable-next-line react/jsx-filename-extension
   <Head>
     <title>{`${config.siteMeta.title} - ${title}`}</title>
     <meta name='title' content={`${config.siteMeta.title} | ${config.siteMeta.subTitle} `} />

@@ -2,14 +2,14 @@ import { useState } from 'react';
 import { ToolType } from '../../Types';
 import styles from './Pagination.module.css';
 
-interface IPagination {
+interface PaginationProps {
   loading: boolean;
   tools: Array<ToolType[]>;
   page: number;
   updatePage: (pageFromBtn: number) => void;
 }
 
-export const Pagination = ({ loading, tools, page, updatePage }: IPagination) => {
+export const Pagination = ({ loading, tools, page, updatePage }: PaginationProps) => {
   const [targetPage, setTargetPage] = useState<number>(page);
 
   const handlePage = (index: number) => {
